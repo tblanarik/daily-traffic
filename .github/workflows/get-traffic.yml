@@ -16,5 +16,5 @@ jobs:
         python-version: '3.10' 
         cache: 'pip' # caching pip dependencies
     - run: pip install -r requirements.txt
-    - run: python main.py --access-code ${{ secrets.WSDOT_API_KEY }} --flow-data-id 2530 -twilio-account-sid ${{ secrets.TWILIO_ACCOUNT_SID }} --twilio-auth-token ${{ secrets.TWILIO_AUTH_TOKEN }} --to-phone-number ${{ secrets.TO_PHONE_NUM }} --from-phone-number ${{ secrets.FROM_PHONE_NUM }}
-    - run: python main.py --access-code ${{ secrets.WSDOT_API_KEY }} --flow-data-id 2532 -twilio-account-sid ${{ secrets.TWILIO_ACCOUNT_SID }} --twilio-auth-token ${{ secrets.TWILIO_AUTH_TOKEN }} --to-phone-number ${{ secrets.TO_PHONE_NUM }} --from-phone-number ${{ secrets.FROM_PHONE_NUM }}
+    - run: python main.py --access-code ${{ secrets.WSDOT_API_KEY }} --flow-data-id 2530 --twilio-account-sid ${{ secrets.TWILIO_ACCOUNT_SID }} --twilio-auth-token ${{ secrets.TWILIO_AUTH_TOKEN }} --to-phone-number ${{ secrets.TO_PHONE_NUM }} --from-phone-number ${{ secrets.FROM_PHONE_NUM }}
+    - run: python main.py --access-code ${{ secrets.WSDOT_API_KEY }} --flow-data-id 2532 --twilio-account-sid ${{ secrets.TWILIO_ACCOUNT_SID }} --twilio-auth-token ${{ secrets.TWILIO_AUTH_TOKEN }} --to-phone-number ${{ secrets.TO_PHONE_NUM }} --from-phone-number ${{ secrets.FROM_PHONE_NUM }}
