@@ -12,10 +12,11 @@ usage: main.py [-h] --access-code ACCESS_CODE --flow-data-id FLOW_DATA_ID --twil
                TWILIO_AUTH_TOKEN --to-phone-number TO_PHONE_NUMBER --from-phone-number FROM_PHONE_NUMBER
 ```
 
-where <access_code> is your WSDOT API access code and <flow_data_id> is the ID of the traffic flow data to retrieve.
+where `<access_code>` is your WSDOT API access code and `<flow_data_id>` is the ID of the traffic flow data to retrieve.
 
 You can obtain an access code here: https://wsdot.wa.gov/traffic/api/
-See the usage for the TrafficFlow API here: https://wsdot.wa.gov/traffic/api/TrafficFlow/TrafficFlowREST.svc/Help
+
+See the usage for the [TrafficFlow API here](https://wsdot.wa.gov/traffic/api/TrafficFlow/TrafficFlowREST.svc/Help).
 
 To find the list of available `flow_data_id` numbers:
 
