@@ -1,6 +1,6 @@
 # daily-traffic
 
-daily-traffic is a Python program that retrieves traffic flow data from the Washington State Department of Transportation (WSDOT) API. The program is designed to be run daily to collect the latest traffic flow data.
+daily-traffic is a Python program that retrieves traffic flow data from the Washington State Department of Transportation (WSDOT) API and send a text message to the configured phone number if traffic is bad.
 
 ### Usage
 To run daily-traffic, use the following command:
