@@ -5,8 +5,10 @@ from flow_data import FlowData
 TRAFFIC_FLOW_URL = ("http://wsdot.wa.gov/Traffic/api/TrafficFlow/"
                     "TrafficFlowREST.svc/GetTrafficFlowAsJson")
 
+
 class WSDOTTrafficFlow:
     """Represents a WSDOT traffic flow."""
+
     def __init__(self, access_code, flow_data_id):
         self.access_code = access_code
         self.flow_data_id = flow_data_id

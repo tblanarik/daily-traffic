@@ -2,9 +2,6 @@ import argparse
 from sms_manager import SMSManager
 from wsdot_trafficflow import WSDOTTrafficFlow
 
-# [14th Ave Olympia, Tumwater Blvd]
-TRAFFIC_LOCATIONS = [2530, 2532]
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='Retrieve traffic flow data from WSDOT API and send text message using Twilio API')
@@ -24,10 +21,11 @@ if __name__ == "__main__":
 
     traffic_flow = WSDOTTrafficFlow(args.access_code, args.flow_data_id)
     sms = SMSManager(args.twilio_account_sid,
-                          args.twilio_auth_token, args.to_phone_number, args.from_phone_number)
+                     args.twilio_auth_token, args.to_phone_number, args.from_phone_number)
 
     flow_data = traffic_flow.flow_data()
     if flow_data.flow_reading_value > 1:
-        sms.send_text_message(f"{flow_data.flow_station_location.description} Slow Traffic")
+        sms.send_text_message(
+            f"{flow_data.flow_station_location.description} Slow Traffic")
     else:
         print("No slow traffic: ", flow_data.flow_station_location.description)

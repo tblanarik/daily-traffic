@@ -1,5 +1,6 @@
 class FlowStationLocation:
     """Represents a flow station location."""
+
     def __init__(self, description, direction, latitude, longitude, mile_post, road_name):
         self.description = description
         self.direction = direction
@@ -23,6 +24,7 @@ class FlowStationLocation:
 
 class FlowData:
     """Represents a traffic flow reading from WSDOT."""
+
     def __init__(self, flow_data_id, flow_reading_value, flow_station_location, region, station_name, time):
         self.flow_data_id = flow_data_id
         self.flow_reading_value = flow_reading_value
@@ -34,7 +36,8 @@ class FlowData:
     @classmethod
     def from_json(cls, json_obj):
         """Create a FlowData object from a JSON object."""
-        flow_station_location = FlowStationLocation.from_json(json_obj['FlowStationLocation'])
+        flow_station_location = FlowStationLocation.from_json(
+            json_obj['FlowStationLocation'])
         return cls(
             json_obj['FlowDataID'],
             json_obj['FlowReadingValue'],
