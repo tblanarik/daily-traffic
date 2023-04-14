@@ -1,0 +1,20 @@
+name: Check Traffic
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 7 * * 1-5"
+
+jobs:
+  retrieve-and-send:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+        cache: 'pip' # caching pip dependencies
+    - run: pip install -r requirements.txt
+    - run: python main.py --access-code ${{ secrets.WSDOT_API_KEY }} --flow-data-id 2530 -twilio-account-sid ${{ secrets.TWILIO-ACCOUNT-SID }} --twilio-auth-token ${{ secrets.TWILIO-AUTH-TOKEN }} --to-phone-number ${{ secrets.TO-PHONE-NUM }} --from-phone-number ${{ secrets.FROM-PHONE-NUM }}
+    - run: python main.py --access-code ${{ secrets.WSDOT_API_KEY }} --flow-data-id 2532 -twilio-account-sid ${{ secrets.TWILIO-ACCOUNT-SID }} --twilio-auth-token ${{ secrets.TWILIO-AUTH-TOKEN }} --to-phone-number ${{ secrets.TO-PHONE-NUM }} --from-phone-number ${{ secrets.FROM-PHONE-NUM }}
