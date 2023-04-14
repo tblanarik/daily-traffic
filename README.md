@@ -15,5 +15,8 @@ where <access_code> is your WSDOT API access code and <flow_data_id> is the ID o
 You can obtain an access code here: https://wsdot.wa.gov/traffic/api/
 
 
-License
+#### License
 daily-traffic is licensed under the MIT License. See LICENSE for more information.
+
+#### Note 
+95% of this application was written with [Copilot X](https://github.com/features/preview/copilot-x)
