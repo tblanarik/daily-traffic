@@ -1,5 +1,7 @@
 # daily-traffic
 
+[![Check Traffic](https://github.com/tblanarik/daily-traffic/actions/workflows/get-traffic.yml/badge.svg)](https://github.com/tblanarik/daily-traffic/actions/workflows/get-traffic.yml) [![CodeQL](https://github.com/tblanarik/daily-traffic/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/tblanarik/daily-traffic/actions/workflows/github-code-scanning/codeql)
+
 daily-traffic is a Python program that retrieves traffic flow data from the Washington State Department of Transportation (WSDOT) API and sends a text message to the configured phone number if traffic is slow (`FlowReadingValue > 1`).
 
 ### Usage
