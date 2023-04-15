@@ -3,7 +3,7 @@ name: Check Traffic
 on:
   workflow_dispatch:
   schedule:
-    - cron: "45 7 * * 1-5"
+    - cron: "45 14 * * 1-5"
 
 jobs:
   retrieve-and-send:
