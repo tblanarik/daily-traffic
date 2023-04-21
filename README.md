@@ -2,14 +2,13 @@
 
 [![Check Traffic](https://github.com/tblanarik/daily-traffic/actions/workflows/get-traffic.yml/badge.svg)](https://github.com/tblanarik/daily-traffic/actions/workflows/get-traffic.yml) [![CodeQL](https://github.com/tblanarik/daily-traffic/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/tblanarik/daily-traffic/actions/workflows/github-code-scanning/codeql)
 
-daily-traffic is a Python program that retrieves traffic flow data from the Washington State Department of Transportation (WSDOT) API and sends a text message to the configured phone number if traffic is slow (`FlowReadingValue > 1`).
+daily-traffic is a Python program that retrieves traffic flow data from the Washington State Department of Transportation (WSDOT) API and sends a message to the specified POST endpoint and recipients if traffic is slow (`FlowReadingValue > 1`).
 
 ### Usage
 To run daily-traffic, use the following command:
 
 ```python
-usage: main.py [-h] --access-code ACCESS_CODE --flow-data-id FLOW_DATA_ID --twilio-account-sid TWILIO_ACCOUNT_SID --twilio-auth-token
-               TWILIO_AUTH_TOKEN --to-phone-number TO_PHONE_NUMBER --from-phone-number FROM_PHONE_NUMBER
+usage: main.py [-h] --access-code ACCESS_CODE --flow-data-id FLOW_DATA_ID --recipients RECIPIENTS --post-url POST_URL
 ```
 
 where `<access_code>` is your WSDOT API access code and `<flow_data_id>` is the ID of the traffic flow data to retrieve.
