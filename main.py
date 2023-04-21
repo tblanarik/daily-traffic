@@ -19,7 +19,7 @@ if __name__ == "__main__":
     message_manager = MessageManager(args.post_url)
 
     flow_data = traffic_flow.flow_data()
-    if flow_data.flow_reading_value > 0:
+    if flow_data.flow_reading_value > 1:
         message_manager.send_message(
             f"{flow_data.flow_station_location.description} Slow Traffic = ({flow_data.flow_reading_value})!",
             args.recipients)
