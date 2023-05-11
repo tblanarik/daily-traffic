@@ -7,4 +7,5 @@ class MessageManager:
 
     def send_message(self, message, recipients):
         """Send message to POST endpoint"""
-        requests.post(self.post_url, json={"message": message, "recipients": recipients})
+        resp = requests.post(self.post_url, json={"message": message, "recipients": recipients})
+        print("HTTP response: ", resp.reason)
