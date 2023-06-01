@@ -17,7 +17,7 @@ def manual_run(req: func.HttpRequest) -> func.HttpResponse:
     return func.HttpResponse("Finished checking traffic")
 
 @app.function_name(name="timertrigger")
-@app.schedule(schedule="30,45 14,23 * * 1-5",
+@app.schedule(schedule="0 30,45 14,23 * * 1-5",
               arg_name="timertrigger",
               run_on_startup=False)
 def timer_trigger(timertrigger: func.TimerRequest) -> None:
