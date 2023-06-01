@@ -1,7 +1,13 @@
+# Azure Function Core Tools
+
+```bash
+npm i -g azure-functions-core-tools@4 --unsafe-perm true
+```
+
 # Deploy
 
 ```bash
-func azure functionapp publish daily-traffic-function
+func azure functionapp publish daily-traffic-function --python
 ```
 
 # Init function

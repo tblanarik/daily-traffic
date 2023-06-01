@@ -16,38 +16,11 @@ def manual_run(req: func.HttpRequest) -> func.HttpResponse:
     traffic_report(2532, debug=True)
     return func.HttpResponse("Finished checking traffic")
 
-@app.function_name(name="timertrigger730")
-@app.schedule(schedule="30 14 * * 1-5",
-              arg_name="timertrigger730",
+@app.function_name(name="timertrigger")
+@app.schedule(schedule="0 30,45 14,23 * * 1-5",
+              arg_name="timertrigger",
               run_on_startup=False)
-def timer_trigger_730(timertrigger730: func.TimerRequest) -> None:
-    traffic_report(2530)
-    traffic_report(2532)
-
-
-@app.function_name(name="timertrigger745")
-@app.schedule(schedule="45 14 * * 1-5",
-              arg_name="timertrigger745",
-              run_on_startup=False)
-def timer_trigger_745(timertrigger745: func.TimerRequest) -> None:
-    traffic_report(2530)
-    traffic_report(2532)
-
-
-@app.function_name(name="timertrigger430")
-@app.schedule(schedule="30 23 * * 1-5",
-              arg_name="timertrigger430",
-              run_on_startup=False)
-def timer_trigger_430(timertrigger430: func.TimerRequest) -> None:
-    traffic_report(2530)
-    traffic_report(2532)
-
-
-@app.function_name(name="timertrigger445")
-@app.schedule(schedule="45 23 * * 1-5",
-              arg_name="timertrigger445",
-              run_on_startup=False)
-def timer_trigger_445(timertrigger445: func.TimerRequest) -> None:
+def timer_trigger(timertrigger: func.TimerRequest) -> None:
     traffic_report(2530)
     traffic_report(2532)
 
